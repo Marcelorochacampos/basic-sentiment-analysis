@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>Analise de sentimentos</h1>
+
+            <div class="text-area-container">
+                <textarea id="message" placeholder="Mensagem . . ."></textarea>
+            </div>
+            <div>
+                <button class="send-message">Enviar</button>
+            </div>
+            <div class="result">
+                <h1>Sentimento</h1>
+                <img id="sad-img" src="{{ url_for('static', filename='img/pleading-face.webp') }}"/>
+                <img id="happy-img" src="{{ url_for('static', filename='img/happy-face.png') }}"/>
+                <img id="gif" src="{{ url_for('static', filename='img/loading.gif') }}" style="width: 100px"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
