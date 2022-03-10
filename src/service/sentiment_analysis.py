@@ -1,14 +1,12 @@
 import os
 import pickle
 cur_path = os.path.dirname(os.path.realpath('__file__'))
-print(cur_path)
+
 model_path = os.path.join(cur_path, 'src/data/tfidf_model_max_iter_200_v3.pkl')
 model_path = os.path.abspath(os.path.realpath(model_path))
-print(model_path)
 
 tokenizer_path = os.path.join(cur_path, 'src/data/tfidf_vectorizer_max_iter_200_v3.pkl')
 tokenizer_path = os.path.abspath(os.path.realpath(tokenizer_path))
-print(tokenizer_path)
 
 
 class SentimentAnalysisService:
